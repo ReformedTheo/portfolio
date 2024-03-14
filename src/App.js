@@ -158,7 +158,7 @@ const projects = [
     title: 'My Portfolio',
     description: 'This very own website was overengineered for studying purposes',
     image: theo_full,
-    github: 'https://github.com/ReformedTheo/portfolio',
+    github: 'https://github.com/ReformedTheo/portfolio/blob/master/README.md',
   },
 ];
 
@@ -237,7 +237,7 @@ const TalkToMe = () => {
      &nbsp;or&nbsp; 
         <a
           id="link"
-          href="https://www.linkedin.com/in/théo-xavier-lopes-586751239/"
+          href="https://www.github.com/ReformedTheo"
           target="_blank"
           rel="noopener noreferrer"
         >

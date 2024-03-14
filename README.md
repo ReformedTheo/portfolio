@@ -43,29 +43,29 @@ The pipeline consists of a single job named `build`, which is executed on the la
 
 For setting up the project locally, you need to have Node.js installed. After cloning the repository, install dependencies with:
 
-\```sh
+```sh
 npm install
-\```
+```
 
 To start the development server, run:
 
-\```sh
+```sh
 npm start
-\```
+```
 
 To create a production build, use:
 
-\```sh
+```sh
 npm run build
-\```
+```
 
 ## Deployment
 
 To manually deploy the website to GitHub Pages, run:
 
-\```sh
+```sh
 npm run deploy
-\```
+```
 
 Ensure you have set up your `package.json` with the correct `homepage` URL and that you have the necessary permissions to push to the repository.
 
