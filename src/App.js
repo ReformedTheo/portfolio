@@ -69,6 +69,8 @@ const AboutMe = () => (
         />
       </div>
       <p className="description">
+
+        THEEEEEEOOOOOO
         I am a Software Developer with 2+ years of experience working with
         multiple programming languages, such as Python and Go. Currently
         graduating under Software Engineering at{" "}
