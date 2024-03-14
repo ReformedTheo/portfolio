@@ -69,8 +69,6 @@ const AboutMe = () => (
         />
       </div>
       <p className="description">
-
-        THEEEEEEOOOOOO
         I am a Software Developer with 2+ years of experience working with
         multiple programming languages, such as Python and Go. Currently
         graduating under Software Engineering at{" "}
@@ -109,6 +107,7 @@ const Skills = () => {
     { name: "Linux", icon: faLinux },
     { name: "AWS", icon: faAws },
     { name: "Docker", icon: faDocker },
+    { name: "GitHub", icon: faGithub}
   ];
 
   const skillsWithoutIcons = [
@@ -116,6 +115,7 @@ const Skills = () => {
     "Terraform",
     "Django",
     "Microsoft SQL",
+    "Github Actions"
   ];
 
   return (
@@ -158,7 +158,7 @@ const projects = [
     title: 'My Portfolio',
     description: 'This very own website was overengineered for studying purposes',
     image: theo_full,
-    github: 'https://github.com/username/portfolio',
+    github: 'https://github.com/ReformedTheo/portfolio',
   },
 ];
 
@@ -246,7 +246,7 @@ const TalkToMe = () => {
         and we'll talk!
       </p>
       <a
-        href="https://calendly.com/your-calendly-link"
+        href="https://calendly.com/reformedtheo/30min"
         target="_blank"
         rel="noopener noreferrer"
         className="calendly-link-button"
