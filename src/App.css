@@ -1,0 +1,377 @@
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif; /* Example font */
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: white;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 80vh; /* This makes sure that the section is at least the height of the viewport */
+  text-align: center;
+  padding: 50px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: transparent;
+  color: white;
+  font-size: 1.2em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f0a500; /* Accent color on hover */
+}
+
+/* Button Style */
+button {
+  padding: 10px 20px;
+  background-color: #f0a500; /* Accent color */
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffd700; /* Brighter color on hover */
+}
+
+
+/* Skills Icons */
+.skills-with-icons div {
+  /* Adjust dimensions as needed */
+  width: 80px;
+  height: 80px;
+  margin: 15px;
+  line-height: 80px;
+  border-radius: 50%;
+  background: white;
+  color: black; /* Icon color */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+#about {
+  display: flex;
+  flex-wrap: wrap; /* This allows items to wrap to the next line on smaller screens */
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Optional: adds some space between the items */
+}
+
+#description, #picture {
+  flex: 1; /* Allows both items to grow and fill the available space equally */
+  min-width: 300px; /* Prevents the items from getting too small on narrow screens */
+}
+
+#description {
+  order: 1; /* Default order is 0, so giving #description a lower order ensures it comes first */
+}
+
+#picture {
+  order: 2; /* This will ensure the picture is always to the right of the description */
+}
+
+.skills-with-icons div:hover {
+  background-color: #f0a500; /* Accent color */
+  transform: scale(1.1); /* Scale effect on hover */
+  color: white;
+}
+
+.skills-without-icons{
+  font-size: larger;
+}
+
+.skills-without-icons ul {
+  list-style-type: none; /* Removes the default list item marker */
+  padding-left: 0; /* Optionally remove padding if desired */
+}
+
+/* Add custom list markers */
+.skills-without-icons li::before {
+  content: "+"; /* Custom list marker */
+  color: #f0a500; /* Yellow color */
+  font-weight: bold; /* Optional: makes the "+" sign bold */
+  margin-right: 10px; /* Space between the custom marker and text */
+}
+
+/* FontAwesome Icon Size */
+.fa-svg-icon {
+  font-size: 2rem; /* Adjust the icon size */
+}
+#about {
+  flex-direction: column; /* Stacks items vertically by default */
+}
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.title {
+  display: inline-block;
+}
+
+
+
+/* Dynamic animation duration based on title length */
+.title[data-title='Software Engineer'] {
+  width: 14ch; /* Adjust based on text length */
+  animation: typing 2s steps(14) 1s forwards, blinkCursor 0.75s steps(40) infinite;
+}
+
+.title[data-title='DevOps'] {
+  width: 6ch; /* Adjust based on text length */
+  animation: typing 1s steps(6) 1s forwards, blinkCursor 0.75s steps(40) infinite;
+}
+
+/* About Me Name Style */
+.about{
+  font-size: larger;
+}
+
+.talk-to-me-btn {
+  font-size: 1rem;
+  padding: 20px 40px; 
+  border-radius: 50%; 
+  background-color:#f0a500; 
+  border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); 
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba(255, 223, 0, 0.85); 
+    transform: translateY(-2px); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25)
+  }
+}
+
+.talk-to-me-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; 
+}
+
+.name-big {
+  font-size: 48px; /* Adjust based on your design needs */
+  font-weight: bold; /* Makes the font bold */
+}
+
+span{
+  color: #f0a500;
+  font-weight: bolder;
+}
+
+.name-big .letter-t {
+  color: #f0a500; /* Yellow color for 'T' */
+}
+
+/* Adjusts the rest of the name to white, assuming your body's text color is already white */
+#link{
+  color: #f0a500;
+}
+
+/* Experience Section Layout */
+/* Experience Section Layout */
+#experience {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line if necessary */
+  justify-content: space-around; /* Distributes space evenly, including edges */
+  gap: 20px; /* Space between boxes */
+}
+
+/* Style for each experience box */
+.experience-box {
+  flex: 1; /* Allows boxes to grow and fill the available space, but you can remove it to control width more directly */
+  max-width: calc(50% - 20px); /* Adjusted for wider boxes, 2 items per row */
+  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white for glass effect */
+  backdrop-filter: blur(10px); /* Blur effect for the glass-like background */
+  -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+  box-shadow: 0 4px 8px rgba(240, 195, 0, 0.6); /* Yellow shadow */
+  padding: 20px; /* Padding inside the box */
+  margin: 10px; /* Margin around the box */
+  border-radius: 10px; /* Optional: rounded corners for a smoother look */
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Optional: subtle border for depth */
+}
+
+#projects {
+  padding: 60px 0;
+  text-align: center;
+  /* Gradient background for the whole section */
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Spacing between cards */
+  padding: 20px;
+}
+
+.project-card {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: auto; /* Fixed height, or you can use 'auto' for variable height */
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Align project info to the bottom */
+  /* Semi-transparent overlay on the image */
+  background-color: rgba(240, 165, 0, 0.7); /* Semi-transparent overlay color */
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  background-color: rgba(240, 165, 0, 0.5); /* Increase transparency on hover */
+}
+
+.project-info {
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.6); /* Dark transparent background for text readability */
+  color: white;
+  width: 100%; /* Full width of the parent */
+  transition: background-color 0.3s ease;
+  border-radius: 0 0 8px 8px; /* Rounded corners at the bottom */
+}
+
+.project-card:hover .project-info {
+  background: rgba(0, 0, 0, 0.8); /* Less transparent on hover */
+}
+
+.project-info h3,
+.project-info p {
+  margin: 5px 0;
+}
+
+.project-info a {
+  color: #f0a500; /* Stylish yellow color for GitHub link */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Stack cards on mobile */
+  }
+
+  .project-card {
+    height: auto; /* Adjust height for mobile */
+  }
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* Stack cards on mobile */
+  }
+
+  .project-card {
+    height: auto; /* Adjust height for mobile */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .experience-box {
+    max-width: calc(100% - 20px); /* Adjust to full width on smaller screens */
+  }
+}
+
+
+/* Updated CSS for social media icons */
+#footer-social {
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  align-items: center; /* Align the icons vertically */
+  gap: 20px; /* Space between each icon */
+}
+
+.icon-linkedin, .icon-github {
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.icon-linkedin:hover, .icon-github:hover {
+  transform: scale(1.1); /* Slightly increase size on hover */
+}
+#social-icon{
+  color: #f0a500;
+}
+
+.title{
+  color: #f0a500;
+  font-weight: bolder;
+}
+
+.talk-to-me-title {
+  font-size: 2.5rem; /* Large, eye-catching title */
+  color: #f0a500; /* Accent color for the title */
+  margin-bottom: 30px;
+}
+
+.talk-to-me-description {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.calendly-link-button {
+  font-size: 1.2rem;
+  padding: 10px 25px;
+  border-radius: 25px; /* Rounded corners */
+  background-color: #f0a500; /* Accent color for the button */
+  color: #111; /* Dark text for the button */
+  text-decoration: none; /* Remove underline from the link */
+  transition: background-color 0.3s, transform 0.3s;
+
+  /* Adding a shadow for depth */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.calendly-link-button:hover {
+  background-color: #ffd700; /* Lighter yellow on hover */
+  transform: scale(1.05); /* Slight increase in size on hover */
+}
+
+@media (min-width: 768px) { /* Adjust this value as needed */
+  #about {
+    flex-direction: row; /* Sets items side by side on larger screens */
+  }
+}
