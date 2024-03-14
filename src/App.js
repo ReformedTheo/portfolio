@@ -13,8 +13,10 @@ import {
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 import './App.css';
+import theo_full from "./img/theo_full.png";
+import app1Image from './img/app1.png';
+import app2Image from './img/app2.png';
 
-const theo_full = `${process.env.PUBLIC_URL}/img/theo_full.png`;
 
 // About Me Component
 const DynamicTitle = ({ titles, interval = 5000 }) => {
@@ -141,19 +143,19 @@ const projects = [
   {
     title: 'Exchange App',
     description: 'Exchange Converter CLI Application in GO',
-    image: `${process.env.PUBLIC_URL}/img/app1.png`,
+    image: app1Image,
     github: 'https://github.com/ReformedTheo/cli_exchange_converter',
   },
   {
     title: 'Open Face Recognition',
     description: 'Face Recognition app built in Python using OpenCV',
-    image: `${process.env.PUBLIC_URL}/img/app2.png`,
+    image: app2Image,
     github: 'https://github.com/ReformedTheo/Open-FR',
   },
   {
     title: 'My Portfolio',
     description: 'This very own website was overengineered for studying purposes',
-    image: `${process.env.PUBLIC_URL}/img/theo_full.png`,
+    image: theo_full,
     github: 'https://github.com/username/portfolio',
   },
 ];
