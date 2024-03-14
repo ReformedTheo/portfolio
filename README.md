@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the code for my personal portfolio website. It includes a Continuous Integration/Continuous Deployment (CI/CD) pipeline using GitHub Actions.
 
-## Available Scripts
+## Disclaimer
 
-In the project directory, you can run:
+Please note that I am not a frontend developer. This website serves as a personal project and a means to learn and experiment with web development technologies.
 
-### `npm start`
+## CI/CD Pipeline
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The CI/CD pipeline is defined in the `.github/workflows/nodejs.yml` file and consists of several key steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Triggers
 
-### `npm test`
+- **Push**: The pipeline is triggered on every push to the `master` branch.
+- **Pull Request**: Any pull request targeting the `master` branch will also trigger the pipeline.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Jobs
 
-### `npm run build`
+The pipeline consists of a single job named `build`, which is executed on the latest Ubuntu virtual environment provided by GitHub Actions.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Steps
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Checkout**: The pipeline checks out the source code for the latest commit on the `master` branch or within a pull request.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Node.js Setup**: It sets up the Node.js environment, using the version specified in the matrix (18.x as of the current setup).
 
-### `npm run eject`
+3. **Cache Dependencies**: The pipeline caches the `node_modules` directory to speed up the installation of dependencies in subsequent runs.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Install Dependencies**: It performs a clean install of the Node.js dependencies using `npm ci`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. **Build**: The source code is then built using `npm run build`, creating a production build of the website.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+6. **Test**: Runs any tests associated with the project using `npm test`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+7. **Deploy**: If all previous steps are successful, the pipeline deploys the build to GitHub Pages using the `gh-pages` package. The `GITHUB_TOKEN` secret is used for authentication with GitHub.
 
-## Learn More
+### Environment Variables
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `GITHUB_TOKEN`: A GitHub Actions provided secret used to authenticate against the GitHub repository to allow pushing the build artifacts to the `gh-pages` branch.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Local Development
 
-### Code Splitting
+For setting up the project locally, you need to have Node.js installed. After cloning the repository, install dependencies with:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+\```sh
+npm install
+\```
 
-### Analyzing the Bundle Size
+To start the development server, run:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+\```sh
+npm start
+\```
 
-### Making a Progressive Web App
+To create a production build, use:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+\```sh
+npm run build
+\```
 
-### Advanced Configuration
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To manually deploy the website to GitHub Pages, run:
 
-### Deployment
+\```sh
+npm run deploy
+\```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Ensure you have set up your `package.json` with the correct `homepage` URL and that you have the necessary permissions to push to the repository.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This CI/CD pipeline ensures that every change is automatically built, tested, and deployed, streamlining the development process and keeping the live site up-to-date with the latest changes in the repository.
