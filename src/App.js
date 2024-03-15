@@ -115,7 +115,8 @@ const Skills = () => {
     "Terraform",
     "Django",
     "Microsoft SQL",
-    "Github Actions"
+    "Github Actions",
+    "Microservices"
   ];
 
   return (
