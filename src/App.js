@@ -116,7 +116,8 @@ const Skills = () => {
     "Django",
     "Microsoft SQL",
     "Github Actions",
-    "Microservices"
+    "Microservices",
+    "IAC"
   ];
 
   return (
