@@ -63,7 +63,7 @@ const AboutMe = () => (
           <span className="letter-t">T</span>héo
         </h2>
         <DynamicTitle
-          titles={["Software Developer", "Avid Lerner"]}
+          titles={["Software Developer", "Avid Learner"]}
           interval={3000}
         />
       </div>
