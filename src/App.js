@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPython,
   faAws,
@@ -11,12 +11,11 @@ import {
   faGolang,
   faGithub,
   faLinkedin,
-} from '@fortawesome/free-brands-svg-icons';
-import './App.css';
+} from "@fortawesome/free-brands-svg-icons";
+import "./App.css";
 import theo_full from "./img/theo_full.png";
-import app1Image from './img/app1.png';
-import app2Image from './img/app2.png';
-
+import app1Image from "./img/app1.png";
+import app2Image from "./img/app2.png";
 
 // About Me Component
 const DynamicTitle = ({ titles, interval = 5000 }) => {
@@ -64,20 +63,21 @@ const AboutMe = () => (
           <span className="letter-t">T</span>héo
         </h2>
         <DynamicTitle
-          titles={["Software Engineer", "DevOps Engineer"]}
+          titles={["Software Developer", "Avid Lerner"]}
           interval={3000}
         />
       </div>
       <p className="description">
-        I am a Software Developer with 2+ years of experience working with
-        multiple programming languages, such as Python and Go. Currently
-        graduating under Software Engineering at{" "}
+        I'm Theo, a software developer with insatiable curiosity! I'm pursuing a
+        bachelor's in Software Engineering at{" "}
         <a id="link" href="https://www.pucminas.br/">
           PUC MINAS
         </a>
-        . My professional journey has evolved towards specializing in DevOps,
-        with a keen interest in mastering containerization, CI/CD pipelines,
-        infrastructure as code (IaC), and leveraging cloud computing platforms.
+        &ensp;and have ~ two years of experience programming. I love to learn new
+        things; the various areas of software development, like designing
+        systems for scalability, using interactive and real-time engines, and
+        improving developer workflow through tools & automation. Beyond work, I
+        enjoy talking anime, video games, and general 'geek' culture!.
         <br></br>
         <br></br>
         I'm passionate about writing complex APIs, tools, automating processes
@@ -86,14 +86,13 @@ const AboutMe = () => (
         making life easier grew exponentially.
       </p>
       <div className="talk-to-me-button-container">
-      <a href="#talktome" style={{ textDecoration: 'none' }}>
-        <button className="talk-to-me-btn">Let's Talk!</button>
+        <a href="#talktome" style={{ textDecoration: "none" }}>
+          <button className="talk-to-me-btn">Let's Talk!</button>
         </a>
       </div>
     </div>
     <div id="picture">
       <img src={theo_full} alt="Portrait of Théo" height="700" />
-      <p>AI Generated image</p>
     </div>
   </section>
 );
@@ -107,7 +106,7 @@ const Skills = () => {
     { name: "Linux", icon: faLinux },
     { name: "AWS", icon: faAws },
     { name: "Docker", icon: faDocker },
-    { name: "GitHub", icon: faGithub}
+    { name: "GitHub", icon: faGithub },
   ];
 
   const skillsWithoutIcons = [
@@ -117,7 +116,7 @@ const Skills = () => {
     "Microsoft SQL",
     "Github Actions",
     "Microservices",
-    "IAC"
+    "IAC",
   ];
 
   return (
@@ -145,22 +144,23 @@ const Skills = () => {
 // Projects Component
 const projects = [
   {
-    title: 'Exchange App',
-    description: 'Exchange Converter CLI Application in GO',
+    title: "Exchange App",
+    description: "Exchange Converter CLI Application in GO",
     image: app1Image,
-    github: 'https://github.com/ReformedTheo/cli_exchange_converter',
+    github: "https://github.com/ReformedTheo/cli_exchange_converter",
   },
   {
-    title: 'Open Face Recognition',
-    description: 'Face Recognition app built in Python using OpenCV',
+    title: "Open Face Recognition",
+    description: "Face Recognition app built in Python using OpenCV",
     image: app2Image,
-    github: 'https://github.com/ReformedTheo/Open-FR',
+    github: "https://github.com/ReformedTheo/Open-FR",
   },
   {
-    title: 'My Portfolio',
-    description: 'This very own website was overengineered for studying purposes',
+    title: "My Portfolio",
+    description:
+      "This very own website was overengineered for studying purposes",
     image: theo_full,
-    github: 'https://github.com/ReformedTheo/portfolio/blob/master/README.md',
+    github: "https://github.com/ReformedTheo/portfolio/blob/master/README.md",
   },
 ];
 
@@ -169,11 +169,17 @@ const Projects = () => (
     <h2 className="talk-to-me-title">Projects</h2>
     <div className="projects-grid">
       {projects.map((project, index) => (
-        <div key={index} className="project-card" style={{ backgroundImage: `url(${project.image})` }}>
+        <div
+          key={index}
+          className="project-card"
+          style={{ backgroundImage: `url(${project.image})` }}
+        >
           <div className="project-info">
             <h3>{project.title}</h3>
             <p>{project.description}</p>
-            <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href={project.github} target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
           </div>
         </div>
       ))}
@@ -234,9 +240,9 @@ const TalkToMe = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faLinkedin} /> Linkedin {" "}
+          <FontAwesomeIcon icon={faLinkedin} /> Linkedin{" "}
         </a>
-     &nbsp;or&nbsp; 
+        &nbsp;or&nbsp;
         <a
           id="link"
           href="https://www.github.com/ReformedTheo"
@@ -296,7 +302,7 @@ function App() {
   }, []);
 
   return (
-    <div className='App'>
+    <div className="App">
       <nav>
         {/* Update navigation links with process.env.PUBLIC_URL */}
         <a href={`${process.env.PUBLIC_URL}/#about`}>About Me</a>

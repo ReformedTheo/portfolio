@@ -218,10 +218,10 @@ span{
 .experience-box {
   flex: 1; /* Allows boxes to grow and fill the available space, but you can remove it to control width more directly */
   max-width: calc(50% - 20px); /* Adjusted for wider boxes, 2 items per row */
-  background: rgba(255, 255, 255, 0.5); /* Semi-transparent white for glass effect */
+  background: rgba(100, 100, 100, 0.5);/* Semi-transparent white for glass effect */
   backdrop-filter: blur(10px); /* Blur effect for the glass-like background */
   -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
-  box-shadow: 0 4px 8px rgba(240, 195, 0, 0.6); /* Yellow shadow */
+  box-shadow: 0 4px 8px rgba(255, 208, 0, 0.6); /* Yellow shadow */
   padding: 20px; /* Padding inside the box */
   margin: 10px; /* Margin around the box */
   border-radius: 10px; /* Optional: rounded corners for a smoother look */
