@@ -110,6 +110,8 @@ const Skills = () => {
   ];
 
   const skillsWithoutIcons = [
+    "C++",
+    "C#",
     "Ansible",
     "Terraform",
     "Django",
