@@ -193,29 +193,29 @@ const Projects = () => (
 const Experience = () => (
   <section id="experience" data-aos="fade-right">
     <div className="experience-box">
-      <h2 className="title">Software Developer at PCX Tecnologia</h2>
+      <h2 className="title">Software Developer at PCX Tecnologia (Mid) | C++, Python, Go, SQL, Azure</h2>
       <span> 06/2023 - now </span>
       <p>
-        <span>Experience in Software Maintenance:</span> Advanced maintenance of
-        legacy software using Symantec Workflow, JavaScript, and C#, with strong
-        analytical and problem-solving skills.Solid experience in management and
-        maintenance of SQL Server databases. <br></br>
+        <span>Led a team of two developers in maintaining a legacy codebase powering a Help Desk service with 4000+ users</span> Advanced maintenance of
+        while reducing query times by 50% on average. <br></br>
         <br></br>
-        <br></br> <span>Prototype Development and New Solutions:</span> Planning
+        <br></br> <span>MVP Planning and Development:</span> Planning
         and development of prototypes for RFID data reading and collection
-        systems, using Go, Python, and technologies like OpenCV for facial
+        systems, using C++, Go, Python, and technologies like OpenCV for facial
         recognition. Creation of REST APIs and implementation of Web Sockets for
         interactive and real-time applications. <br></br>
         <br></br>
         <br></br>
-        <span>Experience in Android Testing:</span> Maintenance and testing of
-        Android data collector applications using Java's JUnit library, focusing
-        on quality control and bug prevention.
+        <span>Mobile App Ci/Cd Architection and implementation:</span> Architected and implemented Cloud Infrastructure and CI/CD to support a mobile application.
+        <br></br>
+        <br></br>
+        <span>Handled code QA process for mobile application, driving 10% to 70% test coverage</span> writing unit tests.
+
       </p>
     </div>
     {
       <div className="experience-box">
-        <h2 className="title">Study Group at PUC Minas</h2>
+        <h2 className="title">Study Group at PUC Minas</h2><br></br>
         <span> 02/2024 - now</span>
         <p>
           Volunteer <span>Researcher</span> at the Software Engineering Study
@@ -224,6 +224,15 @@ const Experience = () => (
           experience in scientific research and scientific article writing
         </p>
       </div>
+    }
+    {
+      <div className="experience-box">
+      <h2 className="title">Games {'<'}-&-{'>'} Software Study Group Volunteer | Unity, Unreal, C++, C#</h2><br></br>
+      <span> 09/2022 - 01/2023</span>
+      <p>
+      Ran a recurring student meetup between IS, SWE, and Games Engineering course students alongside fostering mutual learning between students of these courses, in conjunction with another student representative
+      </p>
+    </div>
     }
   </section>
 );
