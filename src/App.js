@@ -193,7 +193,7 @@ const Projects = () => (
 const Experience = () => (
   <section id="experience" data-aos="fade-right">
     <div className="experience-box">
-      <h2 className="title">Software Developer at PCX Tecnologia (Mid) | C++, Python, Go, SQL, Azure</h2>
+      <h2 className="title">Software Developer at PCX Tecnologia (Mid) | C#, Python, Java, SQL, Github Actions</h2>
       <span> 06/2023 - now </span>
       <p>
         <span>Led a team of two developers in maintaining a legacy codebase powering a Help Desk service with 4000+ users</span> Advanced maintenance of
@@ -209,7 +209,9 @@ const Experience = () => (
         <span>Mobile App Ci/Cd Architection and implementation:</span> Architected and implemented Cloud Infrastructure and CI/CD to support a mobile application.
         <br></br>
         <br></br>
-        <span>Handled code QA process for mobile application, driving 10% to 70% test coverage</span> writing unit tests.
+        <span>Development of Critical Android Features in Java:</span> Spearheaded the development of essential functionalities for Android applications using Java, focusing on enhancing user experience.
+        <br></br>
+        <br></br>
 
       </p>
     </div>
@@ -231,6 +233,24 @@ const Experience = () => (
       <span> 09/2022 - 01/2023</span>
       <p>
       Ran a recurring student meetup between IS, SWE, and Games Engineering course students alongside fostering mutual learning between students of these courses, in conjunction with another student representative
+      </p>
+    </div>
+    }
+    {
+      <div className="experience-box">
+      <h2 className="title">Unreal Engine Developer Intern at Framestore | Unreal Engine, C++, Perforce, TeamCity</h2><br></br>
+      <span> 06/2024 - 09/2024</span>
+      <p>
+      <span>Development of key features</span> for <a href="https://www.youtube.com/watch?v=VyCvGVmHm7A&t=1s&ab_channel=Framestore" target="_blank" rel="noreferrer">Farsight Go </a> using C++ on Unreal Engine 5
+      <br></br>
+      <br></br>
+      <span>Ran weekly tests</span> on both Farsight Go and Farsight Studio
+      <br></br>
+      <br></br>
+      <span>Architected and Developed an Unreal Engine 5 Plugin</span> for integration between Perforce, Swarm and TeamCity on Unreals Engine's terminal.
+      <br></br>
+      <br></br>
+      <span><a href="https://www.linkedin.com/feed/update/urn:li:activity:7232780256049336322/" target="_blank" rel="noreferrer">Presented for a group of VFX artists and Developers</a></span> about my Personal Project as part of the Launchpad Internship.
       </p>
     </div>
     }
