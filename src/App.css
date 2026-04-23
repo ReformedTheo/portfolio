@@ -1,6 +1,5 @@
 /* ============================================
-   ONE PIECE PORTFOLIO — Ocean + Gold Theme
-   Subtle & Professional
+   Portfolio — Ocean + Gold Theme
    ============================================ */
 
 /* ---------- CSS Variables ---------- */
@@ -320,6 +319,22 @@ section {
   transform: scale(1.05);
 }
 
+.image-frame--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--glass);
+}
+
+.hero-initials {
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 6px;
+  opacity: 0.5;
+  user-select: none;
+}
+
 /* ---------- Skills Section ---------- */
 #skills {
   background:
@@ -409,8 +424,8 @@ section {
   color: var(--gold);
 }
 
-/* ---------- Voyage / Experience ---------- */
-#voyage {
+/* ---------- Experience ---------- */
+#experience {
   background: var(--ocean-deep);
 }
 

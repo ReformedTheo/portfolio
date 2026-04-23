@@ -21,8 +21,6 @@ import {
   faGlobe,
 } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
-// Luffy image is in public folder, referenced via PUBLIC_URL
-const theoLuffy = `${process.env.PUBLIC_URL}/theoLuffy.png`;
 
 // Typewriter Effect Component
 const DynamicTitle = ({ titles, interval = 5000 }) => {
@@ -61,7 +59,6 @@ const DynamicTitle = ({ titles, interval = 5000 }) => {
   );
 };
 
-// Navigation with Thousand Sunny Logo
 const Navigation = () => (
   <nav>
     <a href="#about" className="nav-logo">
@@ -75,7 +72,7 @@ const Navigation = () => (
     <div className="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
-      <a href="#voyage">Voyage</a>
+      <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
@@ -105,8 +102,7 @@ const AboutMe = () => (
           pursuing a degree in Information Systems at{" "}
           <a href="https://www.pucminas.br/" className="inline-link">
             PUC Minas
-          </a>. Outside of code, I'm into anime (One Piece is the GOAT), video games,
-          and pretty much anything geek culture related.
+          </a>. Outside of code, I'm into anime, video games, and pretty much anything geek culture related.
         </p>
         <div className="hero-badges">
           <span className="badge">Python</span>
@@ -119,14 +115,14 @@ const AboutMe = () => (
           <a href="#contact" className="btn btn-primary">
             Let's Talk!
           </a>
-          <a href="#voyage" className="btn btn-outline">
+          <a href="#experience" className="btn btn-outline">
             My Journey
           </a>
         </div>
       </div>
       <div className="hero-image">
-        <div className="image-frame">
-          <img src={theoLuffy} alt="Théo as Luffy" />
+        <div className="image-frame image-frame--placeholder">
+          <span className="hero-initials">TXL</span>
         </div>
       </div>
     </div>
@@ -221,7 +217,6 @@ const Skills = () => {
   );
 };
 
-// Experience / Voyage Section
 const experiences = [
   {
     company: "AmoPromo",
@@ -267,8 +262,8 @@ const experiences = [
   },
 ];
 
-const Voyage = () => (
-  <section id="voyage" data-aos="fade-up">
+const Experience = () => (
+  <section id="experience" data-aos="fade-up">
     <h2 className="section-title">Journey</h2>
     <p className="section-subtitle">Where I've been and what I've built</p>
 
@@ -352,10 +347,10 @@ const projects = [
   {
     title: "This Portfolio",
     description:
-      "The very site you're looking at — a One Piece-themed React portfolio.",
+      "The very site you're looking at — a React portfolio.",
     link: "https://github.com/ReformedTheo/portfolio",
     linkLabel: "GitHub",
-    tags: ["React", "CSS", "One Piece"],
+    tags: ["React", "CSS"],
   },
 ];
 
@@ -483,7 +478,7 @@ function App() {
       <main>
         <AboutMe />
         <Skills />
-        <Voyage />
+        <Experience />
         <Projects />
         <Contact />
         <Footer />
